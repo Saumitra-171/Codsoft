@@ -1,30 +1,30 @@
-# 🧮 Lvl1_task_3 — Calculator
+#  Lvl1_task_3 — Calculator
 
 A fully functional browser-based calculator with keyboard support, calculation history, and expression preview. Built with HTML, CSS, and vanilla JavaScript.
 
 ---
 
-## 📌 Task
+##  Task
 
 **Level 1 — Task 3:** Build a basic calculator using HTML, CSS, and JavaScript.
 
 ---
 
-## ✨ Features
+##  Features
 
-- ➕ **Basic Operations** — Addition, subtraction, multiplication, division
-- ⌨️ **Keyboard Support** — Full keyboard input supported
-- 🕓 **Calculation History** — Last 3 calculations shown, clickable to reuse
-- 👁 **Expression Preview** — Shows current expression above the display
-- ⌫ **Backspace** — Delete last character
-- +/− **Toggle Sign** — Flip positive/negative
-- 🔒 **Safe Evaluation** — Uses `Function()` instead of `eval()` for security
-- 🎨 **Dynamic Font Sizing** — Display shrinks for long numbers
-- ✨ **Button Flash** — Visual feedback on keyboard press
+-  **Basic Operations** — Addition, subtraction, multiplication, division
+-  **Keyboard Support** — Full keyboard input supported
+-  **Calculation History** — Last 3 calculations shown, clickable to reuse
+-  **Expression Preview** — Shows current expression above the display
+-  **Backspace** — Delete last character
+-  **Toggle Sign** — Flip positive/negative
+-  **Safe Evaluation** — Uses `Function()` instead of `eval()` for security
+-  **Dynamic Font Sizing** — Display shrinks for long numbers
+-  **Button Flash** — Visual feedback on keyboard press
 
 ---
 
-## 🗂 Folder Structure
+##  Folder Structure
 
 ```
 Lvl1_task_3/
@@ -35,7 +35,7 @@ Lvl1_task_3/
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 | Technology | Usage |
 |-----------|-------|
@@ -45,7 +45,7 @@ Lvl1_task_3/
 
 ---
 
-## ⚡ How to Run
+##  How to Run
 
 No installation needed:
 
@@ -56,7 +56,7 @@ double-click index.html
 
 ---
 
-## ⌨️ Keyboard Shortcuts
+##  Keyboard Shortcuts
 
 | Key | Action |
 |-----|--------|
@@ -69,6 +69,6 @@ double-click index.html
 
 ---
 
-## 🔒 Security
+##  Security
 
 Expressions are validated with a regex whitelist before evaluation — only digits, operators, dots, and parentheses are allowed. Uses `Function()` constructor instead of `eval()`.

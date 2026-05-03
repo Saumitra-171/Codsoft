@@ -1,4 +1,4 @@
-# 🚀 ProjectFlow — Full-Stack Project Management Tool
+#  ProjectFlow — Full-Stack Project Management Tool
 
 A modern project management application built with React, Node.js, and PostgreSQL (Neon). Features Kanban boards, task tracking, team collaboration, and deadline management.
 
@@ -7,7 +7,7 @@ A modern project management application built with React, Node.js, and PostgreSQ
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -21,20 +21,20 @@ A modern project management application built with React, Node.js, and PostgreSQ
 
 ---
 
-## ✨ Features
+##  Features
 
-- 📁 **Projects** — Create and manage projects with color labels and deadlines
-- 📋 **Kanban Board** — Drag and drop tasks across To Do → In Progress → Review → Done
-- 👥 **Team Members** — Invite teammates by email
-- ✅ **Task Management** — Set title, description, priority, assignee, and deadline
-- 💬 **Comments** — Discuss tasks with your team
-- 📊 **Progress Tracking** — Visual progress bars and stats dashboard
-- 🔒 **Authentication** — Secure JWT-based login and register
-- 📅 **My Tasks** — Personalized task view filtered by status
+-  **Projects** — Create and manage projects with color labels and deadlines
+-  **Kanban Board** — Drag and drop tasks across To Do → In Progress → Review → Done
+-  **Team Members** — Invite teammates by email
+-  **Task Management** — Set title, description, priority, assignee, and deadline
+-  **Comments** — Discuss tasks with your team
+-  **Progress Tracking** — Visual progress bars and stats dashboard
+-  **Authentication** — Secure JWT-based login and register
+-  **My Tasks** — Personalized task view filtered by status
 
 ---
 
-## 🗂 Folder Structure
+##  Folder Structure
 
 ```
 Lvl3_task2/
@@ -92,7 +92,7 @@ Lvl3_task2/
 
 ---
 
-## ⚡ Local Setup
+##  Local Setup
 
 ### 1. Clone the repo
 
@@ -143,7 +143,7 @@ npm start
 
 ---
 
-## 🌐 Deployment
+##  Deployment
 
 ### Backend → Render (Free)
 
@@ -177,7 +177,7 @@ Environment variable to add on Netlify:
 
 ---
 
-## 🔌 API Reference
+##  API Reference
 
 ### Auth
 | Method | Endpoint | Description |
@@ -209,7 +209,7 @@ Environment variable to add on Netlify:
 
 ---
 
-## 🔒 Security
+##  Security
 
 - `.env` files are gitignored — never committed
 - Passwords hashed with bcrypt (10 rounds)

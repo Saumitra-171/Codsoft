@@ -1,26 +1,26 @@
-# 🌐 Lvl1_task_1 — Personal Portfolio Website
+#  Lvl1_task_1 — Personal Portfolio Website
 
 A responsive personal portfolio website for Saumitra Purkayastha, built with pure HTML and CSS.
 
 ---
 
-## 📌 Task
+##  Task
 
 **Level 1 — Task 1:** Build a personal portfolio website to showcase skills, projects, and contact information.
 
 ---
 
-## ✨ Features
+##  Features
 
-- 👤 **About Me** — Introduction with profile photo
-- 🛠 **Skills** — List of technical skills
-- 📁 **Projects** — Cards linking to GitHub repos
-- 📄 **Resume** — Preview and download PDF resume via modal
-- 📬 **Contact** — Email, phone, and location info
+-  **About Me** — Introduction with profile photo
+-  **Skills** — List of technical skills
+-  **Projects** — Cards linking to GitHub repos
+-  **Resume** — Preview and download PDF resume via modal
+-  **Contact** — Email, phone, and location info
 
 ---
 
-## 🗂 Folder Structure
+##  Folder Structure
 
 ```
 Lvl1_task_1/
@@ -32,7 +32,7 @@ Lvl1_task_1/
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 | Technology | Usage |
 |-----------|-------|
@@ -41,7 +41,7 @@ Lvl1_task_1/
 
 ---
 
-## ⚡ How to Run
+##  How to Run
 
 No installation needed — just open in a browser:
 
@@ -58,7 +58,7 @@ npx serve .
 
 ---
 
-## 🌐 Sections
+##  Sections
 
 | Section | Description |
 |---------|-------------|
@@ -71,6 +71,6 @@ npx serve .
 
 ---
 
-## 🔒 Note
+##  Note
 
 Update the resume download path in `index.html` from the local `C:\Resume.pdf` path to a relative path `./Resume.pdf` before deploying.

@@ -1,4 +1,4 @@
-# 🚀 Lvl1_task_2 — LearnWeb Landing Page
+#  Lvl1_task_2 — LearnWeb Landing Page
 
 A clean, modern landing page for "LearnWeb" — an HTML & CSS learning platform. Built with pure HTML and CSS.
 
@@ -10,13 +10,13 @@ A clean, modern landing page for "LearnWeb" — an HTML & CSS learning platform.
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🧭 **Header** — Logo and navigation with a CTA button
-- 🦸 **Hero Section** — Headline, subheading, and two action buttons
-- 🃏 **Features Section** — Three cards showcasing what users will learn
-- 🪜 **Steps Section** — Three-step process guide
-- 🦶 **Footer** — Credits and branding
+-  **Header** — Logo and navigation with a CTA button
+-  **Hero Section** — Headline, subheading, and two action buttons
+-  **Features Section** — Three cards showcasing what users will learn
+-  **Steps Section** — Three-step process guide
+-  **Footer** — Credits and branding
 
 ---
 
@@ -39,7 +39,7 @@ Lvl1_task_2/
 
 ---
 
-## ⚡ How to Run
+##  How to Run
 
 No installation needed:
 
@@ -56,7 +56,7 @@ npx serve .
 
 ---
 
-## 🗃 Page Sections
+##  Page Sections
 
 | Section | Description |
 |---------|-------------|

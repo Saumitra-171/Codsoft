@@ -6,7 +6,7 @@ Each project folder has its own `README.md` with details about the task, tech st
 
 ---
 
-## 📁 Projects
+##  Projects
 
 | Folder | Description |
 |--------|-------------|

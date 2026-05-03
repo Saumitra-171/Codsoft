@@ -1,27 +1,27 @@
-# 🧠 Lvl2_task_2 — QuizMaker
+#  Lvl2_task_2 — QuizMaker
 
 A full-featured quiz creation and taking app built with vanilla HTML, CSS, and JavaScript. Users can sign up, create quizzes, and take quizzes — all in the browser with localStorage persistence.
 
 ---
 
-## 📌 Task
+##  Task
 
 **Level 2 — Task 2:** Build an interactive quiz application where users can create and take quizzes.
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🔐 **Authentication** — Sign up and sign in with localStorage-based auth
-- ✏️ **Create Quizzes** — Add multiple questions with multiple choice answers
-- 📋 **Quiz List** — Browse all available quizzes
-- 🎯 **Take Quizzes** — Answer questions and get a score at the end
-- 💾 **Persistent Storage** — All data saved in localStorage (no backend needed)
-- 📱 **Single Page App** — Smooth screen transitions without page reloads
+-  **Authentication** — Sign up and sign in with localStorage-based auth
+-  **Create Quizzes** — Add multiple questions with multiple choice answers
+-  **Quiz List** — Browse all available quizzes
+-  **Take Quizzes** — Answer questions and get a score at the end
+-  **Persistent Storage** — All data saved in localStorage (no backend needed)
+-  **Single Page App** — Smooth screen transitions without page reloads
 
 ---
 
-## 🗂 Folder Structure
+##  Folder Structure
 
 ```
 Lvl2_task_2/
@@ -39,7 +39,7 @@ Lvl2_task_2/
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 | Technology | Usage |
 |-----------|-------|
@@ -49,7 +49,7 @@ Lvl2_task_2/
 
 ---
 
-## ⚡ How to Run
+##  How to Run
 
 No installation needed — just open in a browser:
 
@@ -60,7 +60,7 @@ double-click index.html
 
 ---
 
-## 🗃 App Screens
+##  App Screens
 
 | Screen | Description |
 |--------|-------------|
@@ -73,6 +73,6 @@ double-click index.html
 
 ---
 
-## 💾 Data Storage
+##  Data Storage
 
 All data (users, quizzes, scores) is stored in the browser's `localStorage`. No backend or database required. Data persists between sessions on the same browser.
