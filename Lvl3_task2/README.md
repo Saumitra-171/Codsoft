@@ -1,84 +1,126 @@
 # 🚀 ProjectFlow — Full-Stack Project Management Tool
 
-A modern project management application with Kanban boards, task tracking, team collaboration, and deadline management.
+A modern project management application built with React, Node.js, and PostgreSQL (Neon). Features Kanban boards, task tracking, team collaboration, and deadline management.
 
-**Stack:** React · Node.js/Express · PostgreSQL (Neon) · JWT Auth
+**Live Demo:** https://lambent-biscochitos-9bab6d.netlify.app  
+**GitHub Repo:** https://github.com/Saumitra-171/Codsoft
+
+---
+
+## 🛠 Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React 18, React Router 6 |
+| Styling | Custom CSS (Space Mono + Syne fonts) |
+| Backend | Node.js 18, Express 4 |
+| Database | PostgreSQL via Neon (serverless) |
+| Auth | JWT + bcrypt |
+| Frontend Hosting | Netlify |
+| Backend Hosting | Render |
 
 ---
 
 ## ✨ Features
 
-- 📁 **Projects** — Create/manage projects with color labels & deadlines
-- 📋 **Kanban Board** — Drag-and-drop tasks across To Do → In Progress → Review → Done
+- 📁 **Projects** — Create and manage projects with color labels and deadlines
+- 📋 **Kanban Board** — Drag and drop tasks across To Do → In Progress → Review → Done
 - 👥 **Team Members** — Invite teammates by email
-- ✅ **Task Management** — Title, description, priority, assignee, deadline
-- 💬 **Comments** — Discuss tasks with team
-- 📊 **Progress Tracking** — Visual progress bars & stats
-- 🔒 **Auth** — Secure JWT-based login/register
+- ✅ **Task Management** — Set title, description, priority, assignee, and deadline
+- 💬 **Comments** — Discuss tasks with your team
+- 📊 **Progress Tracking** — Visual progress bars and stats dashboard
+- 🔒 **Authentication** — Secure JWT-based login and register
 - 📅 **My Tasks** — Personalized task view filtered by status
 
 ---
 
-## 🗂 Project Structure
+## 🗂 Folder Structure
 
 ```
-projectflow/
-├── backend/                  # Node.js + Express API
-│   ├── db/index.js           # Neon PostgreSQL connection + schema
-│   ├── middleware/auth.js    # JWT middleware
-│   ├── routes/
-│   │   ├── auth.js           # Register, Login, Me
-│   │   ├── projects.js       # CRUD + members + stats
-│   │   └── tasks.js          # CRUD + comments + my tasks
-│   ├── server.js             # Express app entry point
-│   ├── .env.example          # Environment variables template
-│   └── package.json
-├── frontend/                 # React SPA
-│   ├── src/
-│   │   ├── context/AuthContext.js
-│   │   ├── utils/api.js      # Axios client
-│   │   ├── pages/
-│   │   │   ├── Login.js
-│   │   │   ├── Register.js
-│   │   │   ├── Dashboard.js  # Project grid + stats
-│   │   │   ├── ProjectBoard.js # Kanban + members + comments
-│   │   │   └── MyTasks.js    # Personal task view
-│   │   ├── components/Layout.js # Sidebar + nav
-│   │   └── styles/globals.css
-│   └── package.json
-├── .gitlab-ci.yml            # GitLab CI/CD pipeline
-├── netlify.toml              # Netlify deployment config
-└── README.md
+Lvl3_task2/
+├── .gitignore
+├── netlify.toml                      # Netlify deploy config
+├── package.json                      # Root scripts
+├── README.md
+│
+├── backend/
+│   ├── server.js                     # Express app entry point
+│   ├── package.json
+│   ├── Procfile                      # For Render deployment
+│   ├── .env.example                  # Environment variables template
+│   │
+│   ├── db/
+│   │   └── index.js                  # Neon PostgreSQL connection + schema
+│   │
+│   ├── middleware/
+│   │   └── auth.js                   # JWT verification middleware
+│   │
+│   └── routes/
+│       ├── auth.js                   # Register, Login, Me
+│       ├── projects.js               # CRUD + members + stats
+│       └── tasks.js                  # CRUD + comments + my tasks
+│
+└── frontend/
+    ├── package.json
+    │
+    ├── public/
+    │   └── index.html
+    │
+    └── src/
+        ├── App.js                    # Routes + auth guards
+        ├── index.js                  # React entry point
+        │
+        ├── context/
+        │   └── AuthContext.js        # Global auth state
+        │
+        ├── components/
+        │   └── Layout.js             # Sidebar + navigation
+        │
+        ├── pages/
+        │   ├── Login.js
+        │   ├── Register.js
+        │   ├── Dashboard.js          # Project grid + stats
+        │   ├── ProjectBoard.js       # Kanban board + comments
+        │   └── MyTasks.js            # Personal task view
+        │
+        ├── utils/
+        │   └── api.js                # Axios client + all API calls
+        │
+        └── styles/
+            └── globals.css           # Full design system
 ```
 
 ---
 
-## ⚡ Quick Start (Local)
+## ⚡ Local Setup
 
-### 1. Clone from GitLab
+### 1. Clone the repo
 
 ```bash
-git clone https://gitlab.com/YOUR_USERNAME/projectflow.git
-cd projectflow
+git clone https://github.com/Saumitra-171/Codsoft.git
+cd Codsoft/Lvl3_task2
 ```
 
 ### 2. Set up Neon Database
 
-1. Go to [neon.tech](https://neon.tech) → Create a free account
-2. Create a new project named `projectflow`
-3. Copy the **Connection String** (it looks like `postgresql://user:pass@ep-xxx.neon.tech/neondb`)
+1. Go to https://neon.tech → Sign up free
+2. Create a new project named `L3_task2`
+3. Copy the connection string:
+   ```
+   postgresql://user:pass@ep-xxx.ap-southeast-1.aws.neon.tech/neondb?sslmode=require
+   ```
 
-### 3. Configure Backend
+### 3. Run the Backend
 
 ```bash
 cd backend
 cp .env.example .env
 ```
 
-Edit `.env`:
+Fill in `.env`:
 ```env
-DATABASE_URL=postgresql://user:pass@ep-xxx.us-east-2.aws.neon.tech/neondb?sslmode=require
-JWT_SECRET=your_random_secret_here_make_it_long
+DATABASE_URL=your_neon_connection_string
+JWT_SECRET=your_random_secret_key
 PORT=5000
 FRONTEND_URL=http://localhost:3000
 ```
@@ -89,11 +131,10 @@ npm run dev
 # API running at http://localhost:5000
 ```
 
-### 4. Configure Frontend
+### 4. Run the Frontend
 
 ```bash
 cd ../frontend
-# Create .env.local
 echo "REACT_APP_API_URL=http://localhost:5000/api" > .env.local
 npm install
 npm start
@@ -104,34 +145,35 @@ npm start
 
 ## 🌐 Deployment
 
-### Backend → Railway (Free tier)
+### Backend → Render (Free)
 
-1. Go to [railway.app](https://railway.app) → New Project → Deploy from GitLab
-2. Select the `backend/` folder (or set root dir)
-3. Add environment variables:
-   - `DATABASE_URL` → your Neon connection string
-   - `JWT_SECRET` → your secret key
-   - `FRONTEND_URL` → your Netlify URL
-4. Railway auto-detects Node.js and deploys
+| Setting | Value |
+|---------|-------|
+| Root Directory | `Lvl3_task2/backend` |
+| Runtime | Node |
+| Build Command | `npm install` |
+| Start Command | `node server.js` |
 
-### Frontend → Netlify (Free tier)
+Environment variables to add on Render:
+| Key | Value |
+|-----|-------|
+| `DATABASE_URL` | Neon connection string |
+| `JWT_SECRET` | your secret key |
+| `PORT` | `5000` |
+| `FRONTEND_URL` | your Netlify URL |
 
-1. Go to [netlify.com](https://netlify.com) → Add new site → Import from GitLab
-2. Build settings:
-   - Base directory: `frontend`
-   - Build command: `npm run build`
-   - Publish directory: `frontend/build`
-3. Environment variables:
-   - `REACT_APP_API_URL` → `https://your-app.railway.app/api`
-4. Deploy!
+### Frontend → Netlify (Free)
 
-### GitLab CI/CD Setup
+| Setting | Value |
+|---------|-------|
+| Base directory | `Lvl3_task2/frontend` |
+| Build command | `npm run build` |
+| Publish directory | `Lvl3_task2/frontend/build` |
 
-1. In GitLab: Settings → CI/CD → Variables
-2. Add:
-   - `NETLIFY_AUTH_TOKEN` → from Netlify user settings
-   - `NETLIFY_SITE_ID` → from Netlify site settings
-   - `NETLIFY_SITE_URL` → your Netlify URL
+Environment variable to add on Netlify:
+| Key | Value |
+|-----|-------|
+| `REACT_APP_API_URL` | `https://your-render-app.onrender.com/api` |
 
 ---
 
@@ -167,37 +209,10 @@ npm start
 
 ---
 
-## 🛠 Tech Stack
+## 🔒 Security
 
-| Layer | Technology |
-|-------|-----------|
-| Frontend | React 18, React Router 6 |
-| Styling | Custom CSS (Space Mono + Syne fonts) |
-| Backend | Node.js 18, Express 4 |
-| Database | PostgreSQL via Neon (serverless) |
-| Auth | JWT + bcrypt |
-| Hosting (FE) | Netlify |
-| Hosting (BE) | Railway |
-| CI/CD | GitLab CI |
-
----
-
-## 📝 GitLab Setup
-
-```bash
-# Initialize and push to GitLab
-git init
-git add .
-git commit -m "feat: initial ProjectFlow implementation"
-git remote add origin https://gitlab.com/YOUR_USERNAME/projectflow.git
-git push -u origin main
-```
-
----
-
-## 🔒 Security Notes
-
-- Never commit `.env` files (they are gitignored)
-- Use strong random strings for `JWT_SECRET`
-- Neon SSL is enforced (`?sslmode=require`)
-- Passwords are hashed with bcrypt (10 rounds)
+- `.env` files are gitignored — never committed
+- Passwords hashed with bcrypt (10 rounds)
+- JWT tokens expire after 7 days
+- Neon SSL enforced via `?sslmode=require`
+- CORS restricted to frontend URL only
