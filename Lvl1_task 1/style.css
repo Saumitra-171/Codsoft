@@ -1,0 +1,315 @@
+/* ── RESET ── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+  background: #fff;
+}
+
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ── HEADER ── */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 1.3rem;
+  color: #111;
+}
+
+header p {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 2px;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+nav a:hover {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+/* ── SECTIONS ── */
+section {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 50px 24px;
+  border-bottom: 1px solid #eee;
+}
+
+section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 2px;
+  background: #1a73e8;
+  margin-top: 6px;
+  margin-bottom: 20px;
+}
+
+/* ── ABOUT ── */
+.about-content {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.about-content img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  flex-shrink: 0;
+  background: #f0f0f0;
+}
+
+.about-content p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ── SKILLS ── */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-list li {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 5px 14px;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  color: #444;
+}
+
+/* ── PROJECTS ── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.project-body {
+  padding: 14px;
+}
+
+.project-body h3 {
+  font-size: 0.95rem;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.project-body p {
+  font-size: 0.82rem;
+  color: #666;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px !important;
+}
+
+.project-tags span {
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 3px;
+  color: #555;
+}
+
+/* ── GITHUB LINK ── */
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 4px 12px;
+  border-radius: 3px;
+  background: #f6f6f6;
+}
+
+.github-link:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+  text-decoration: none;
+}
+
+/* ── BUTTON ── */
+.btn {
+  display: inline-block;
+  background: #1a73e8;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #1558b0;
+  text-decoration: none;
+  color: #fff;
+}
+
+#resume p {
+  margin-bottom: 16px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ── RESUME MODAL ── */
+#resume-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-box {
+  background: #fff;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 780px;
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid #ddd;
+  background: #f9f9f9;
+  font-size: 0.85rem;
+  color: #555;
+  gap: 12px;
+}
+
+.modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-box iframe {
+  flex: 1;
+  width: 100%;
+  border: none;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #888;
+  line-height: 1;
+  padding: 0 4px;
+}
+
+.close-btn:hover {
+  color: #111;
+}
+
+/* ── CONTACT ── */
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ── FOOTER ── */
+footer {
+  text-align: center;
+  padding: 24px;
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+  font-size: 0.82rem;
+  color: #888;
+}
+
+footer p + p {
+  margin-top: 6px;
+}
+
+footer a {
+  color: #888;
+}
+
+footer a:hover {
+  color: #1a73e8;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  header { padding: 14px 20px; flex-direction: column; align-items: flex-start; gap: 10px; }
+  nav { gap: 16px; flex-wrap: wrap; }
+  .about-content { flex-direction: column; }
+  section { padding: 36px 20px; }
+}

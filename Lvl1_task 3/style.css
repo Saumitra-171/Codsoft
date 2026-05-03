@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+#calculator {
+    background: #2a2a2a;
+    border-radius: 16px;
+    width: 320px;
+    padding: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+/* History */
+#history-panel {
+    min-height: 48px;
+    padding: 0 4px 8px;
+}
+
+#history-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    color: #555;
+    font-weight: 600;
+}
+
+#history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 4px;
+}
+
+.history-entry {
+    font-size: 0.75rem;
+    color: #666;
+    text-align: right;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.history-entry:hover { color: #aaa; }
+
+/* Display */
+#display-area {
+    background: #1a1a1a;
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-height: 90px;
+    justify-content: flex-end;
+}
+
+#expression {
+    font-size: 0.8rem;
+    color: #555;
+    min-height: 18px;
+    text-align: right;
+    width: 100%;
+}
+
+#display {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 300;
+    text-align: right;
+}
+
+#display::placeholder { color: #444; }
+#display.error { color: #e05; font-size: 1.4rem; }
+
+/* Buttons */
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+button {
+    height: 68px;
+    border-radius: 10px;
+    border: none;
+    background: #333;
+    color: #e0e0e0;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background 0.1s;
+}
+
+button:hover  { background: #3d3d3d; }
+button:active { background: #444; transform: scale(0.97); }
+
+.wide-btn { grid-column: span 2; }
+
+.fn-btn { background: #2e2e2e; color: #999; font-size: 1rem; }
+.fn-btn:hover { background: #383838; }
+
+.operator-btn { background: #2e2e2e; color: #ff8c42; }
+.operator-btn:hover { background: #383838; }
+
+.equals-btn { background: #ff8c42; color: #fff; }
+.equals-btn:hover { background: #ff9d5a; }
+
+#keyboard-hint {
+    text-align: center;
+    font-size: 0.6rem;
+    color: #444;
+    margin-top: 10px;
+    letter-spacing: 0.08em;
+}
